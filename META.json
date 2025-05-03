@@ -1,0 +1,52 @@
+{
+  "name": "rgb",
+  "abstract": "A rgb color data type",
+  "description": "A Postgres RGB color datatype with btree and hash index support ",
+  "version": "0.0.1",
+  "generated_by": "Jonas Gorauskas",
+  "release_status": "unstable",
+  "maintainer": [
+    "[NixGeek.Dev](https://github.com/nixgeekdev)"
+  ],
+  "license": "apache_2_0",
+  "provides": {
+    "pg_rgb": {
+      "abstract": "A rgb color data type",
+      "file": "sql/rgb.sql",
+      "docfile": "doc/rgb.md",
+      "version": "0.0.1"
+    }
+  },
+  "prereqs": {
+    "runtime": {
+      "requires": {
+        "PostgreSQL": "13.0.0"
+      }
+    },
+    "test": {
+      "requires": {
+        "plpgsql": 0
+      }
+    }
+  },
+  "resources": {
+    "bugtracker": {
+      "web": "https://github.com/nixgeekdev/pg_rgb/issues"
+    },
+    "repository": {
+      "url": "git://github.com/nixgeekdev/pg_rgb.git",
+      "web": "https://github.com/nixgeekdev/pg_rgb/",
+      "type": "git"
+    }
+  },
+  "meta-spec": {
+    "version": "1.0.0",
+    "url": "https://pgxn.org/meta/spec.txt"
+  },
+  "tags": [
+    "datatype",
+    "data type",
+    "color",
+    "rgb"
+  ]
+}
