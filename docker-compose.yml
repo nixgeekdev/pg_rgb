@@ -1,0 +1,23 @@
+name: pg_rgb
+
+services:
+  db:
+    image: postgres:17-bookworm
+    container_name: pg_rgb_db
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password1
+      POSTGRES_DB: rgb_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - pg_rgb_data:/var/lib/postgresql/data
+      - ./:/app
+    post_start:
+      - command: >
+          sh -c "chmod +x /app/scripts/init_container.sh || true"
+      - command: >
+          sh -c "/app/scripts/init_container.sh || true"
+
+volumes:
+  pg_rgb_data:
