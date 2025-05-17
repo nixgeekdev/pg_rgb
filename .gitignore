@@ -7,6 +7,9 @@
 *.obj
 *.elf
 
+# llvm bitcode file
+*.bc
+
 # Linker output
 *.ilk
 *.map
